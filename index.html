@@ -5,32 +5,37 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pro Gardens Sydney</title>
+    <!-- No need for manual CSS link—Vite handles it via main.js import -->
   </head>
-  <body>
+  <body class="min-h-screen bg-gray-50">  <!-- Example Tailwind on body -->
     
-  <header>
-<div>
-    <title>Pro Gardens Sydney</title>
-</div>
-    <nav>
-      <div class="nav-menu">
-        <a class="nav-link" href="#home">Home</a>
-        <a class="nav_-link" href="#meet-the-team">Meet The Team</a>
-        <a class="nav_-link" href="#our-services">Our Services</a>
-        <a class="nav_-link cta-nav" href="#lets-talk">Let's Talk</a>
-      </div>
+    <header class="bg-green-800 text-white py-4">
+      <nav class="max-w-6xl mx-auto flex justify-between items-center px-8">
+        <h2 class="text-2xl font-bold">Pro Gardens Sydney</h2>  <!-- Logo/title -->
+        <div class="nav-menu space-x-8">
+          <a class="nav-link hover:underline" href="#home">Home</a>
+          <a class="nav-link hover:underline" href="#meet-the-team">Meet The Team</a>
+          <a class="nav-link hover:underline" href="#our-services">Our Services</a>
+          <a class="nav-link cta-nav bg-white text-green-800 px-4 py-2 rounded hover:bg-gray-200" href="#lets-talk">Let's Talk</a>
+        </div>
+      </nav>
+    </header>
 
-    </nav>
+    <section class="hero text-center py-20 bg-gradient-to-b from-green-100 to-white">
+      <h1 class="text-6xl md:text-7xl font-bold text-green-800 mb-4">
+        Pro Gardens Sydney
+      </h1>
+      <p class="text-2xl text-gray-700 max-w-2xl mx-auto">
+        Sydney's most reliable gardeners<br>
+        Stunning Landscapes that come to life
+      </p>
+      <button class="mt-8 bg-green-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-600">
+        Get a Free Quote
+      </button>
+    </section>
 
-  </header>
+    <!-- Add more sections here later -->
 
-  <section>
-    <h1>Sydney most reliable gardeners</h1>
-    <p>Stunning Landscapes that come to life </p>
-
-  </section>
-
-
-  
+    <script type="module" src="/src/main.js"></script>  <!-- Keep this if present -->
   </body>
 </html>
