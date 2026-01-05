@@ -1,4 +1,8 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Keep any custom CSS you have below this */
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -101,3 +105,28 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@keyframes auto-rotate {
+  0% { --slide: 1; }
+  33% { --slide: 2; }
+  66% { --slide: 3; }
+  100% { --slide: 1; }
+}
+
+section {
+  --slide: 1; /* Default to slide 1 */
+  animation: auto-rotate 18s infinite; /* 6s per slide x 3 */
+}
+
+/* Force radio based on --slide variable (for auto-rotation) */
+#slide1:checked ~ div[style*="slide1"] { opacity: 1 !important; }
+#slide2:checked ~ div[style*="slide2"] { opacity: 1 !important; }
+#slide3:checked ~ div[style*="slide3"] { opacity: 1 !important; }
+
+/* Auto-check radios (hacky but works in modern browsers) */
+@keyframes check-slide1 { 0%, 33% { } 33.1% { content: 'checked'; } }
+#slide1 { animation: check-slide1 18s infinite; }
+@keyframes check-slide2 { 33%, 66% { } 66.1% { content: 'checked'; } }
+#slide2 { animation: check-slide2 18s infinite; }
+@keyframes check-slide3 { 66%, 100% { } 0.1% { content: 'checked'; } }
+#slide3 { animation: check-slide3 18s infinite; }
