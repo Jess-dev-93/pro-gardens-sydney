@@ -5,21 +5,20 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pro Gardens Sydney</title>
-    <!-- No need for manual CSS link—Vite handles it via main.js import -->
   </head>
-  <body class="min-h-screen bg-gray-50">  <!-- Example Tailwind on body -->
+  <body class="pt-20 min-h-screen bg-gray-50">  <!-- pt-20 or pt-24 depending on header height -->
     
-    <header class="bg-green-800 text-white py-4">
-      <nav class="max-w-6xl mx-auto flex justify-between items-center px-8">
-        <h2 class="text-2xl font-bold">Pro Gardens Sydney</h2>  <!-- Logo/title -->
-        <div class="nav-menu space-x-8">
-          <a class="nav-link hover:underline" href="#home">Home</a>
-          <a class="nav-link hover:underline" href="#meet-the-team">Meet The Team</a>
-          <a class="nav-link hover:underline" href="#our-services">Our Services</a>
-          <a class="nav-link cta-nav bg-white text-green-800 px-4 py-2 rounded hover:bg-gray-200" href="#lets-talk">Let's Talk</a>
-        </div>
-      </nav>
-    </header>
+    <header class="fixed top-0 left-0 w-full bg-green-800 text-white py-4 z-50 shadow-lg">
+  <nav class="max-w-6xl mx-auto flex justify-between items-center px-6 lg:px-8">
+    <h2 class="text-2xl font-bold">Pro Gardens Sydney</h2>
+    <div class="space-x-8 hidden md:flex">  <!-- Hidden on mobile, visible on medium+ screens -->
+      <a class="hover:underline transition" href="#home">Home</a>
+      <a class="hover:underline transition" href="#meet-the-team">Meet The Team</a>
+      <a class="hover:underline transition" href="#our-services">Our Services</a>
+      <a class="bg-white text-green-800 px-5 py-2 rounded-lg font-semibold hover:bg-gray-100 transition" href="#lets-talk">Let's Talk</a>
+    </div>
+  </nav>
+</header>
 
     <section class="hero text-center py-20 bg-gradient-to-b from-green-100 to-white">
       <h1 class="text-6xl md:text-7xl font-bold text-green-800 mb-4">
